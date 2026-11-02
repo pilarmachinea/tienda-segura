@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const total = (precio, cant, desc) =>
-precio * cant * (1 - desc);
+    precio * cant * (1 - desc);
 app.get("/calcular", (req, res) => {
     const resultado = Number(req.query.a) + Number(req.query.b);
     res.json({ resultado });
