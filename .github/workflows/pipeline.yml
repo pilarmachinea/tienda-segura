@@ -17,3 +17,4 @@
          - uses: gitleaks/gitleaks-action@ff98106e4c7b2bc287b24eaf42907196329070c7
            env:
              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+         - run: docker run --rm -v "$PWD":/src aquasec/trivy:latest config --exit-code 1 --severity HIGH,CRITICAL /src
