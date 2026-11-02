@@ -46,8 +46,8 @@ jobs:
 
       # Analiza el código con las reglas recomendadas para el lenguaje detectado (--config auto);
       # --error hace que el paso falle si encuentra problemas.
-      - run: semgrep scan --config auto --error
-
+      - run: semgrep scan --config p/javascript --error
+      
       # Gitleaks busca secretos expuestos (claves, tokens, contraseñas) en el código y el historial.
       # También fijado a un SHA de commit, igual que checkout.
       - uses: gitleaks/gitleaks-action@ff98106e4c7b2bc287b24eaf42907196329070c7
